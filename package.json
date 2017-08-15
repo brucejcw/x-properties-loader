@@ -1,14 +1,13 @@
 {
   "name": "x-properties-loader",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "x-properties-loader for webpack based on [properties](https://www.npmjs.com/package/properties)",
   "main": "index.js",
   "scripts": {
     "lint:js": "eslint ./src/ --fix --format ./node_modules/eslint-friendly-formatter",
     "lint:css": "stylelint --allow-empty-input \"src/**/*.scss\" -s scss",
     "test": "npm run lint:css && npm run lint:js",
-    "compile": "rm -rf dist && babel src --out-dir dist",
-    "publish": "npm run compile && npm publish"
+    "prepublish": "rm -rf dist && babel src --out-dir dist"
   },
   "author": "bruce.jcw@gmail.com",
   "license": "MIT",
